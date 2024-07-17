@@ -1,12 +1,22 @@
 import pytest
 
-from src.product import Product
 from src.category import Category
+from src.product import Product
 
 
 @pytest.fixture
 def product_1():
     return Product(name="Холодильник", description="Холодильник LG", price=30000, quantity=5)
+
+
+@pytest.fixture
+def product_2():
+    return {"name": "Холодильник", "description": "Холодильник LG", "price": 30000, "quantity": 5}
+
+
+@pytest.fixture
+def product_3():
+    return Product(name="Насос", description='Насос автомобильный "Силач 3000"', price=4000, quantity=25)
 
 
 @pytest.fixture
