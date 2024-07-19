@@ -31,4 +31,4 @@ class Product:
 
     @classmethod
     def new_product(cls, kwargs):
-        return Product(**kwargs)
+        return cls(**kwargs)
