@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Dict, List, Any
+from typing import Any, Dict, List
 
 from config import DATA_DIR
 from src.category import Category
