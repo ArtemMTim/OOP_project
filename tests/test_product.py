@@ -23,3 +23,11 @@ def test_new_product(product_2):
     assert product_new.description == "Холодильник LG"
     assert product_new.price == 30000
     assert product_new.quantity == 5
+
+
+def test_add_product(product_1, product_3):
+    assert product_1 + product_3 == 250000
+
+
+def test_str_product(product_1):
+    assert str(product_1) == "Холодильник, 30000 руб. Остаток: 5 шт."
