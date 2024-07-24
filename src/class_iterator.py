@@ -1,4 +1,6 @@
 class Iterator:
+    """Класс описывает итератор, возвращающий вакансии из спсика вакансий"""
+
     def __init__(self, cat_object):
         self.cat_object = cat_object
         self.index = 0
