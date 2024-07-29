@@ -1,7 +1,5 @@
 import pytest
 
-from src.smartphone import Smartphone
-
 
 def test_smartphone_init(smartphone_1):
     assert smartphone_1.name == "Iphone 15"
