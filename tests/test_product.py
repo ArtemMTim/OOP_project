@@ -1,7 +1,7 @@
 from src.product import Product
 
 
-def test_product_init(product_1):
+def test_product_init(product_1, capsys):
     assert product_1.name == "Холодильник"
     assert product_1.description == "Холодильник LG"
     assert product_1.price == 30000
