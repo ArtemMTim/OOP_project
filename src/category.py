@@ -1,8 +1,9 @@
 from src.product import Product
+from src.base_product_list import BaseProductList
 
 
-class Category:
-    """Класс представления категории продуктов."""
+class Category(BaseProductList):
+    """Класс представления категории продуктов. Родительский класс - BaseProductList."""
 
     name: str
     description: str

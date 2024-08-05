@@ -9,3 +9,7 @@ class LawnGrass(Product):
         self.germination_period = germination_period
         self.color = color
         super().__init__(name, description, price, quantity)
+
+
+if __name__ == "__main__":
+    LawnGrass("Газонная трава", "Элитная трава для газона", 500.0, 20, "Россия", "7 дней", "Зеленый")
