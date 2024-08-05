@@ -1,3 +1,5 @@
+import pytest
+
 from src.product import Product
 
 
@@ -31,3 +33,8 @@ def test_add_product(product_1, product_3):
 
 def test_str_product(product_1):
     assert str(product_1) == "Холодильник, 30000 руб. Остаток: 5 шт."
+
+
+def test_product_zero_quantity():
+    with pytest.raises(ValueError):
+        product = Product(name="Насос", description='Насос автомобильный "Силач 3000"', price=4000, quantity=0)
