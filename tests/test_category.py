@@ -1,4 +1,5 @@
 import pytest
+from src.category import Category
 
 
 def test_category_init(category_1, category_2, category_3):
@@ -33,3 +34,14 @@ def test_add_category_not_product(category_3, fake_product):
 
 def test_str_category(category_1):
     assert str(category_1) == "Бытовая техника, количество продуктов: 30 шт."
+
+
+def test_category_middle_price(cat_for_middle_price):
+    category = Category(name="test", description="test", products=cat_for_middle_price)
+    assert category.middle_price() == 111629.63
+
+
+def test_category_middle_price_no_products():
+    category = Category(name="test", description="test", products=[])
+    result = category.middle_price()
+    assert result == 0
